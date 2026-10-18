@@ -63,5 +63,18 @@
       "enabled": false
     },
     "singleProjectMode": true
+  },
+  "auth": {
+    "providers": {
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "Karter Cup",
+        "supportEmail": "hariharankvasn@gmail.com",
+        "authorizedRedirectUris": [
+          "https://karter-cup.web.app",
+          "https://karter-cup.firebaseapp.com",
+          "http://localhost"
+        ]
+      }
+    }
   }
 }
