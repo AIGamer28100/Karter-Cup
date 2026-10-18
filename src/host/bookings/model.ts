@@ -208,7 +208,7 @@ export function formToEvent(f: FormState): NewBookingEvent {
     description: f.description.trim(),
   };
   if (f.id) ev.id = f.id;
-  // Only F1 events link to a calendar race; Kartar Cup / Club events are free-form (R50).
+  // Only F1 events link to a calendar race; Karter Cup / Club events are free-form (R50).
   if (f.category === 'f1' && f.raceId.trim()) ev.raceId = f.raceId.trim();
   return ev;
 }

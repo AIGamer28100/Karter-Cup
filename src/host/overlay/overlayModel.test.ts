@@ -33,7 +33,7 @@ describe('overlayModel', () => {
   });
 
   it('shortens join urls and sizes popups', () => {
-    expect(shortJoinUrl('https://www.kartar-cup.web.app/play/abc/')).toBe('kartar-cup.web.app/play/abc');
+    expect(shortJoinUrl('https://www.karter-cup.web.app/play/abc/')).toBe('karter-cup.web.app/play/abc');
     expect(popupFeatures('compact')).toBe('popup,width=380,height=260');
     expect(isOverlaySize('wide') && !isOverlaySize('x')).toBe(true);
     expect(SIZE_PRESETS.wide.width).toBe(640);

@@ -72,7 +72,7 @@ export function preparePipDocument(source: Document, target: Document): HTMLElem
   body.style.background = read('--color-base', PIP_FALLBACK.background);
   body.style.color = read('--color-ink', PIP_FALLBACK.color);
   body.style.fontFamily = read('--font-sans', PIP_FALLBACK.font);
-  target.title = 'Kartar CUP live overlay';
+  target.title = 'Karter CUP live overlay';
   const container = target.createElement('div');
   container.style.height = '100%';
   container.setAttribute('data-overlay-root', '');

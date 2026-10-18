@@ -1,13 +1,13 @@
 #!/bin/bash
-# Production Deployment Script for Kartar Cup
+# Production Deployment Script for Karter Cup
 # Usage: ./scripts/deploy-production.sh [staging|production]
 
 set -e
 
 ENVIRONMENT=${1:-production}
-PROJECT_ID="kartar-cup"
+PROJECT_ID="karter-cup"
 
-echo "Deploying Kartar Cup to $ENVIRONMENT..."
+echo "Deploying Karter Cup to $ENVIRONMENT..."
 
 # Colors for output
 RED='\033[0;31m'

@@ -178,7 +178,7 @@ export function OverlayProvider({ children, pipApi }: { children: ReactNode; pip
 export function OverlayPage() {
   useEffect(() => {
     const prev = document.title;
-    document.title = 'Kartar CUP live overlay';
+    document.title = 'Karter CUP live overlay';
     return () => {
       document.title = prev;
     };

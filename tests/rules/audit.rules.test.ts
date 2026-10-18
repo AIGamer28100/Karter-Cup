@@ -35,7 +35,7 @@ async function seedLog(id = 'log1') {
 
 beforeAll(async () => {
   env = await initializeTestEnvironment({
-    projectId: 'kartar-cup-audit-rules-test',
+    projectId: 'karter-cup-audit-rules-test',
     firestore: { rules: readFileSync('firestore.rules', 'utf8') },
   });
 });

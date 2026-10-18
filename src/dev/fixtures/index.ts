@@ -75,7 +75,7 @@ export const mockEventConfig = (over: Partial<EventConfig> = {}): EventConfig =>
   id: 'mock-malaysia-2026',
   raceId: '2026-r16-malaysia',
   name: 'Malaysian Grand Prix',
-  subtitle: 'Kartar CUP watch party',
+  subtitle: 'Karter CUP watch party',
   circuit: 'Sepang International Circuit',
   themeId: '2026-r16-malaysia',
   raceStartUtc: ts(BASE_MS),

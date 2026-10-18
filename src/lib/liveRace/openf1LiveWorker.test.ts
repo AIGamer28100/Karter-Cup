@@ -122,7 +122,7 @@ async function idToken() {
   const pair = await crypto.subtle.generateKey({ name: 'RSASSA-PKCS1-v1_5', modulusLength: 2048, publicExponent: new Uint8Array([1, 0, 1]), hash: 'SHA-256' }, true, ['sign', 'verify']);
   const now = Math.floor(Date.now() / 1000);
   const head = b64u(JSON.stringify({ alg: 'RS256', kid: 'k1' }));
-  const body = b64u(JSON.stringify({ aud: 'kartar-cup', iss: 'https://securetoken.google.com/kartar-cup', sub: 'u1', iat: now - 5, exp: now + 3600 }));
+  const body = b64u(JSON.stringify({ aud: 'karter-cup', iss: 'https://securetoken.google.com/karter-cup', sub: 'u1', iat: now - 5, exp: now + 3600 }));
   const sig = await crypto.subtle.sign('RSASSA-PKCS1-v1_5', pair.privateKey, new TextEncoder().encode(`${head}.${body}`));
   const jwk = { ...(await crypto.subtle.exportKey('jwk', pair.publicKey)), kid: 'k1' };
   return { token: `${head}.${body}.${b64u(sig)}`, jwks: { keys: [jwk] } };
@@ -130,9 +130,9 @@ async function idToken() {
 
 describe('worker fetch handler', () => {
   afterEach(() => vi.unstubAllGlobals());
-  const base = { FIREBASE_PROJECT_ID: 'kartar-cup', ALLOWED_ORIGINS: 'https://kartar-cup.web.app' };
+  const base = { FIREBASE_PROJECT_ID: 'karter-cup', ALLOWED_ORIGINS: 'https://karter-cup.web.app' };
   const req = (token?: string, method = 'GET', path = '/v1/live/lap') =>
-    new Request(`https://w.example${path}`, { method, headers: { Origin: 'https://kartar-cup.web.app', ...(token ? { Authorization: `Bearer ${token}` } : {}) } });
+    new Request(`https://w.example${path}`, { method, headers: { Origin: 'https://karter-cup.web.app', ...(token ? { Authorization: `Bearer ${token}` } : {}) } });
 
   it('rejects missing token, bad origin and non-GET', async () => {
     expect((await worker.fetch(req(), base)).status).toBe(401);

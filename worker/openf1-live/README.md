@@ -1,4 +1,4 @@
-# kartar-openf1-live (paid OpenF1 live lap count, DORMANT by default)
+# karter-openf1-live (paid OpenF1 live lap count, DORMANT by default)
 
 A Cloudflare Worker that logs in to OpenF1's paid API with credentials only the Worker knows, and serves the
 current race lap to signed-in app users. Until it is switched on, the app is on the free tier: OpenF1 returns no
@@ -25,8 +25,8 @@ You receive a username and password.
    Or let step 3 do it: export both variables, or put them in `worker/openf1-live/.dev.vars` (git-ignored; see `.dev.vars.example`).
 3. Deploy the Worker: `scripts/deploy-live-worker.sh` (refuses to run without both credentials; prints the Worker URL).
    If you only want a redeploy after step 2, `npm run worker:live:deploy` works too.
-4. Set the env var to the printed URL (no trailing slash): `VITE_OPENF1_LIVE_URL=https://kartar-openf1-live.<subdomain>.workers.dev`
-   (build environment or `.env`). Optionally smoke-test first: `LIVE=<url> ORIGIN=https://kartar-cup.web.app npm run worker:live:smoke`.
+4. Set the env var to the printed URL (no trailing slash): `VITE_OPENF1_LIVE_URL=https://karter-openf1-live.<subdomain>.workers.dev`
+   (build environment or `.env`). Optionally smoke-test first: `LIVE=<url> ORIGIN=https://karter-cup.web.app npm run worker:live:smoke`.
 5. Rebuild and redeploy the site: `npm run build && npm run deploy`. Then apply the snippet below (once) so the host console uses it.
 
 ## Roll back

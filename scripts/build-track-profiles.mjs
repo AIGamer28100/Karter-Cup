@@ -33,7 +33,7 @@ async function get(path, tries = 6) {
     const wait = Math.max(0, last + 800 - Date.now());
     if (wait) await sleep(wait);
     last = Date.now();
-    const res = await fetch(`${BASE}${path}`, { headers: { 'User-Agent': 'kartar-cup-build-script (fan site, non-commercial)' } });
+    const res = await fetch(`${BASE}${path}`, { headers: { 'User-Agent': 'karter-cup-build-script (fan site, non-commercial)' } });
     if (res.status === 429) {
       await sleep(3000 * i);
       continue;

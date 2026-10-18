@@ -72,9 +72,9 @@ export function icsFile(c: CalendarInput & { uid: string }): string {
   return [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Kartar CUP//Tickets//EN',
+    'PRODID:-//Karter CUP//Tickets//EN',
     'BEGIN:VEVENT',
-    `UID:${c.uid}@kartar-cup`,
+    `UID:${c.uid}@karter-cup`,
     `DTSTAMP:${utcStamp(Date.now())}`,
     `DTSTART:${utcStamp(c.startMs)}`,
     `DTEND:${utcStamp(end)}`,

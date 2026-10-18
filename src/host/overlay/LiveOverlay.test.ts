@@ -9,7 +9,7 @@ const base: LiveOverlayProps = {
   loading: false,
   error: null,
   quiz: { name: 'Monaco Quiz', opensAt: ts(NOW - 60_000), closesAt: ts(NOW + 125_000), override: null, winnerRevealed: false } as never,
-  joinUrl: 'https://www.kartarcup.com/play/abc123/',
+  joinUrl: 'https://www.kartercup.com/play/abc123/',
   quizTabHref: '/host/events/e1',
   nowMs: NOW,
 };

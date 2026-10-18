@@ -14,7 +14,7 @@ const A = 'settings/active';
 
 beforeAll(async () => {
   env = await initializeTestEnvironment({
-    projectId: 'kartar-cup-livequiz-rules-test',
+    projectId: 'karter-cup-livequiz-rules-test',
     firestore: { rules: readFileSync('firestore.rules', 'utf8') },
   });
 });

@@ -43,7 +43,7 @@ describe('calendar', () => {
   it('builds a valid .ics with escaped text and CRLF lines', () => {
     const ics = icsFile({ ...c, uid: 'abc123', title: 'Watch, party; night' });
     expect(ics.startsWith('BEGIN:VCALENDAR\r\n')).toBe(true);
-    expect(ics).toContain('UID:abc123@kartar-cup');
+    expect(ics).toContain('UID:abc123@karter-cup');
     expect(ics).toContain('DTSTART:20261004T063000Z');
     expect(ics).toContain('DTEND:20261004T093000Z');
     expect(ics).toContain('SUMMARY:Watch\\, party\\; night');

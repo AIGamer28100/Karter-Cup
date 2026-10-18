@@ -45,7 +45,7 @@ const submit = (over: Record<string, unknown> = {}) => setDoc(doc(guest(), E + '
 
 beforeAll(async () => {
   env = await initializeTestEnvironment({
-    projectId: 'kartar-cup-quiz-rules-test',
+    projectId: 'karter-cup-quiz-rules-test',
     firestore: { rules: readFileSync('firestore.rules', 'utf8') },
   });
 });

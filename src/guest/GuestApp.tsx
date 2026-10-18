@@ -35,7 +35,7 @@ export default function GuestApp({ eventId, accessToken }: { eventId: string; ac
         <Split
           left={
             <Reveal>
-              <Eyebrow>Kartar CUP</Eyebrow>
+              <Eyebrow>Karter CUP</Eyebrow>
               <h1 className="mt-3 text-h2 font-semibold text-balance">Grid not open yet</h1>
               <p className="mt-3 text-pretty text-muted">Race control has not set up this game. Check back in a few minutes.</p>
             </Reveal>

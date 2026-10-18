@@ -1,4 +1,4 @@
-// Google Places proxy for the Kartar Cup host console.
+// Google Places proxy for the Karter Cup host console.
 // The Google API key lives ONLY here (Worker secret GOOGLE_PLACES_API_KEY); the browser never sees it.
 // Callers must send a Firebase ID token of someone who can run bookings. Setup: README.md section 4.
 

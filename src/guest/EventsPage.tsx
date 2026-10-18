@@ -166,8 +166,8 @@ function TicketReadout({ ticket, kind = 'f1', stretch = true, title }: { ticket:
 
 const CATEGORY_META: Record<EventCategory, { label: string; Icon: typeof Trophy; shape: string }> = {
   f1: { label: 'F1 watch party', Icon: FlagCheckered, shape: 'rounded-full' },
-  cup: { label: 'Kartar Cup', Icon: Trophy, shape: 'rounded-md' },
-  club: { label: 'Kartar Club', Icon: UsersThree, shape: 'rounded-none border-dashed' },
+  cup: { label: 'Karter Cup', Icon: Trophy, shape: 'rounded-md' },
+  club: { label: 'Karter Club', Icon: UsersThree, shape: 'rounded-none border-dashed' },
 };
 
 /** Category label: icon + text + a distinct outline shape, so it never relies on colour alone (R50). */
@@ -186,7 +186,7 @@ function CategoryChip({ category }: { category: EventCategory }) {
 const whenFmt = new Intl.DateTimeFormat(undefined, { weekday: 'short', day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' });
 const whenIstFmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
 
-/** A host-created event (Kartar Cup / Kartar Club / an F1 event with no calendar race). Same card
+/** A host-created event (Karter Cup / Karter Club / an F1 event with no calendar race). Same card
  * shell as RaceCard so the page reads as one family. */
 function EventCard({ event, index }: { event: BookingEvent; index: number }) {
   const category = categoryOf(event);
@@ -460,7 +460,7 @@ function SeasonToggle({ seasons, active, onChange }: { seasons: number[]; active
 }
 
 /** Public /events listing, in sections (R50): F1 (the whole calendar, one season at a time,
- * F1.com-style) | Kartar Cup | Kartar Club | All (every host event + the hosted F1 races, one list).
+ * F1.com-style) | Karter Cup | Karter Club | All (every host event + the hosted F1 races, one list).
  * The section lives in ?tab= so it is shareable and survives back/forward. Ticket status is sourced
  * only from real BookingEvent docs (never invented, R49) - R28 (browse without auth). */
 export default function EventsPage() {
@@ -606,9 +606,9 @@ export default function EventsPage() {
     tab === 'f1' ? (
       f1Panel
     ) : tab === 'cup' ? (
-      categoryPanel(cupEvents, 'Kartar Cup events (karting days and league nights) will show up here once they are announced.')
+      categoryPanel(cupEvents, 'Karter Cup events (karting days and league nights) will show up here once they are announced.')
     ) : tab === 'club' ? (
-      categoryPanel(clubEvents, 'Kartar Club meetups and watch-party extras will show up here once they are announced.')
+      categoryPanel(clubEvents, 'Karter Club meetups and watch-party extras will show up here once they are announced.')
     ) : loading ? (
       listSkeleton
     ) : (

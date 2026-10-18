@@ -2,7 +2,7 @@
  * Unauthenticated security smoke test for the OpenF1 live Worker (deployed, or local `npm run worker:live:dev`).
  *
  *   npm run worker:live:smoke                                  # against http://127.0.0.1:8788
- *   LIVE=https://kartar-openf1-live.<you>.workers.dev ORIGIN=https://kartar-cup.web.app npm run worker:live:smoke
+ *   LIVE=https://karter-openf1-live.<you>.workers.dev ORIGIN=https://karter-cup.web.app npm run worker:live:smoke
  *
  * Never sends or prints credentials. Authenticated behaviour (real lap data) is NOT covered here.
  */

@@ -12,7 +12,7 @@ import { Case, Grid, LabButton, Pick } from '../parts';
 /* The host's live overlay (Document PiP / popup) with fixture data, at both size presets. */
 
 const MIN = 60_000;
-const JOIN = 'https://kartar-cup.web.app/play/Ab3dE5fG7hJ9kL2mN4pQ6rS8';
+const JOIN = 'https://karter-cup.web.app/play/Ab3dE5fG7hJ9kL2mN4pQ6rS8';
 
 type StateId = 'open' | 'scheduled' | 'closed' | 'no-link' | 'long' | 'no-quiz' | 'loading' | 'error';
 const STATES: { id: StateId; label: string; note: string }[] = [

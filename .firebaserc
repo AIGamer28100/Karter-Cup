@@ -1,7 +1,6 @@
 {
   "projects": {
-    "default": "kartar-cup",
-    "production": "kartar-cup",
-    "staging": "kartar-cup-staging"
+    "default": "karter-cup",
+    "production": "karter-cup"
   }
 }

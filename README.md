@@ -1,4 +1,4 @@
-# Kartar Cup
+# Karter Cup
 
 Leisure go-karting league and F1 watch-party community (Chennai and Coimbatore): live race-state
 home page, prediction quiz, cup standings, ticketed events with door check-in, and a host console.
@@ -36,15 +36,15 @@ Places key is **not** one of them and never goes in `.env*` files.
 Checks: `npm run build` (type-check + bundle), `npm test` (unit tests), `npm run lint` (lint with ESLint, 0 errors expected), rules tests need the emulator:
 
 ```bash
-npx firebase emulators:exec --only firestore --project demo-kartar \
+npx firebase emulators:exec --only firestore --project demo-karter \
   "npx vitest run --config vitest.rules.config.ts"
 ```
 
 End-to-end tests (Playwright, against the Auth + Firestore emulators; `firebase.json` defines their ports):
 
 ```bash
-VITE_USE_EMULATORS=true VITE_FIREBASE_PROJECT_ID=demo-kartar npx firebase emulators:exec \
-  --only auth,firestore --project demo-kartar \
+VITE_USE_EMULATORS=true VITE_FIREBASE_PROJECT_ID=demo-karter npx firebase emulators:exec \
+  --only auth,firestore --project demo-karter \
   "bash -c 'npx vite --port 5173 --host 127.0.0.1 & sleep 6; npx playwright test'"
 ```
 
@@ -140,7 +140,7 @@ npm run worker:smoke      # security checks: no token / bad origin / non-GET / n
 `npm run worker:smoke` only covers the rejection paths by default. To also check the signed-in path,
 pass a host's Firebase ID token: `PLACES_TEST_ID_TOKEN=<token> npm run worker:smoke` (get one in the
 browser console while signed in as a host). Against a deployed Worker:
-`PROXY=https://... ORIGIN=https://kartar-cup.web.app npm run worker:smoke`.
+`PROXY=https://... ORIGIN=https://karter-cup.web.app npm run worker:smoke`.
 
 The Google key must never appear in `.env*` — anything named `VITE_*` is readable in the browser. Its
 only two homes are `worker/places-proxy/.dev.vars` (local) and the Worker secret (production). If it
@@ -152,7 +152,7 @@ The site is static (Firebase Hosting) plus Firestore rules.
 
 ```bash
 npm ci && npm test && npm run build
-npx -y firebase-tools@latest deploy --only firestore:rules --project kartar-cup   # rules only
+npx -y firebase-tools@latest deploy --only firestore:rules --project karter-cup   # rules only
 npm run deploy                                                                    # hosting + rules
 ```
 

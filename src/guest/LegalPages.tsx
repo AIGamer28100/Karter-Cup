@@ -55,7 +55,7 @@ function Doc({ eyebrow, title, intro, children }: { eyebrow: string; title: stri
 }
 
 export function TermsPage() {
-  usePageMeta({ title: 'Terms and conditions', description: 'The terms for using the Kartar CUP website, bookings and prediction game.' });
+  usePageMeta({ title: 'Terms and conditions', description: 'The terms for using the Karter CUP website, bookings and prediction game.' });
   return (
     <Doc
       eyebrow="Legal"
@@ -119,7 +119,7 @@ export function TermsPage() {
 }
 
 export function PrivacyPage() {
-  usePageMeta({ title: 'Privacy policy', description: 'What personal data the Kartar CUP website collects, why, who sees it and your choices.' });
+  usePageMeta({ title: 'Privacy policy', description: 'What personal data the Karter CUP website collects, why, who sees it and your choices.' });
   return (
     <Doc
       eyebrow="Legal"

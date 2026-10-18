@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 
-export const SITE_NAME = 'Kartar CUP';
+export const SITE_NAME = 'Karter CUP';
 export const DEFAULT_DESCRIPTION =
-  'Race watch parties, karting events and tickets from Kartar CUP, built around The Karter Cup community.';
+  'Race watch parties, karting events and tickets from Karter CUP, built around The Karter Cup community.';
 const MAX_DESCRIPTION = 160;
 
 export interface PageMeta {
@@ -13,7 +13,7 @@ export interface PageMeta {
   noindex?: boolean;
 }
 
-/** Pure: "Page | Kartar CUP", or just the site name when there is no (or a redundant) page title. */
+/** Pure: "Page | Karter CUP", or just the site name when there is no (or a redundant) page title. */
 export function buildTitle(title?: string): string {
   const t = title?.trim();
   if (!t || t.toLowerCase() === SITE_NAME.toLowerCase()) return SITE_NAME;

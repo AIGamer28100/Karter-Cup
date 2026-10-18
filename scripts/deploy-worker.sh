@@ -43,8 +43,8 @@ npx wrangler deploy
 cat <<'NEXT'
 
 Next:
-  1. Copy the printed https://kartar-places-proxy.<subdomain>.workers.dev URL.
-  2. Smoke-test it:   PROXY=<that url> ORIGIN=https://kartar-cup.web.app npm run worker:smoke
+  1. Copy the printed https://karter-places-proxy.<subdomain>.workers.dev URL.
+  2. Smoke-test it:   PROXY=<that url> ORIGIN=https://karter-cup.web.app npm run worker:smoke
   3. Rebuild the site with it and redeploy hosting:
        VITE_PLACES_PROXY_URL=<that url> npm run build && npm run deploy
 NEXT

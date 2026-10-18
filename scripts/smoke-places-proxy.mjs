@@ -4,8 +4,8 @@
  * no access without a Firebase ID token, no access from an origin that is not allow-listed.
  *
  *   npm run worker:smoke                                   # against http://127.0.0.1:8787
- *   PROXY=https://kartar-places-proxy.<you>.workers.dev npm run worker:smoke
- *   ORIGIN=https://kartar-cup.web.app PROXY=... npm run worker:smoke
+ *   PROXY=https://karter-places-proxy.<you>.workers.dev npm run worker:smoke
+ *   ORIGIN=https://karter-cup.web.app PROXY=... npm run worker:smoke
  *
  * The two authenticated checks run only when you pass a real host ID token:
  *   PLACES_TEST_ID_TOKEN=$(...) npm run worker:smoke

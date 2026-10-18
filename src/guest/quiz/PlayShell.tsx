@@ -7,7 +7,7 @@ export default function PlayShell({ children, hud }: { children: ReactNode; hud?
       <header className="mb-4 flex min-h-11 flex-wrap items-center justify-between gap-x-4 gap-y-2 md:mb-8">
         <p className="inline-flex items-center gap-2 text-sm font-semibold tracking-tight text-ink">
           <span className="size-2 shrink-0 rounded-full bg-accent shadow-[0_0_10px_1px_rgb(216_30_54/0.6)]" aria-hidden="true" />
-          Kartar CUP
+          Karter CUP
           <span className="hidden font-mono text-[0.65rem] font-normal uppercase tracking-widest text-muted sm:inline">Race predictor</span>
         </p>
         {hud}

@@ -47,7 +47,7 @@ async function seed(opts: { seasonPublished?: boolean; roundPublished?: boolean 
 
 beforeAll(async () => {
   env = await initializeTestEnvironment({
-    projectId: 'kartar-cup-cup-rules-test',
+    projectId: 'karter-cup-cup-rules-test',
     firestore: { rules: readFileSync('firestore.rules', 'utf8') },
   });
 });

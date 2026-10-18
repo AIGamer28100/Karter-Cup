@@ -14,7 +14,7 @@ const ent = (uid: string) => ({ uid, name: 'N ' + uid, provider: 'google', email
 
 beforeAll(async () => {
   env = await initializeTestEnvironment({
-    projectId: 'kartar-cup-ownentries-rules-test',
+    projectId: 'karter-cup-ownentries-rules-test',
     firestore: { rules: readFileSync('firestore.rules', 'utf8') },
   });
 });

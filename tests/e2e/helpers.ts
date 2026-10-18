@@ -1,7 +1,7 @@
 import type { Page } from '@playwright/test';
 import { DRIVERS, QUESTIONS, TEAMS } from '../../src/config/event';
 
-export const PROJECT = 'demo-kartar';
+export const PROJECT = 'demo-karter';
 const FS = `http://127.0.0.1:8080`;
 const AUTH = `http://127.0.0.1:9099`;
 export const SCREENS = 'test-results/screens';

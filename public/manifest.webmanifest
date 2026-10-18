@@ -1,8 +1,8 @@
 {
   "id": "/",
-  "name": "Kartar CUP",
-  "short_name": "Kartar CUP",
-  "description": "Race watch parties, karting events and tickets from Kartar CUP.",
+  "name": "Karter CUP",
+  "short_name": "Karter CUP",
+  "description": "Race watch parties, karting events and tickets from Karter CUP.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

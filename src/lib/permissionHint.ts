@@ -31,7 +31,7 @@ export function permissionHint(e: unknown, need: Need, access: Access | undefine
   }
   return (
     `The database refused to ${what}, even though your account (${mine}) has the right role. ` +
-    `Usually the latest security rules are not deployed yet (deploy firestore.rules together with the app, using --project kartar-cup), ` +
+    `Usually the latest security rules are not deployed yet (deploy firestore.rules together with the app, using --project karter-cup), ` +
     `or the data failed a rules check (an unexpected or oversized field). Needed role: ${n.label}.`
   );
 }

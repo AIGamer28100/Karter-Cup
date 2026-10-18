@@ -21,7 +21,7 @@ const userDoc = (uid: string, email: string, over: Record<string, unknown> = {})
 
 beforeAll(async () => {
   env = await initializeTestEnvironment({
-    projectId: 'kartar-cup-userphone-rules-test',
+    projectId: 'karter-cup-userphone-rules-test',
     firestore: { rules: readFileSync('firestore.rules', 'utf8') },
   });
 });

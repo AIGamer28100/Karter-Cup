@@ -43,21 +43,21 @@ describe('draft', () => {
   });
 
   it('drops non-string answers and bad steps', () => {
-    store.set('kartar-cup:draft:v2:r1', JSON.stringify({ answers: { q1: 'a', q2: 5, q3: null }, step: -1 }));
+    store.set('karter-cup:draft:v2:r1', JSON.stringify({ answers: { q1: 'a', q2: 5, q3: null }, step: -1 }));
     expect(loadDraft('r1')).toEqual({ answers: { q1: 'a' }, step: 0 });
-    store.set('kartar-cup:draft:v2:r1', JSON.stringify({ answers: {}, step: 1.5 }));
+    store.set('karter-cup:draft:v2:r1', JSON.stringify({ answers: {}, step: 1.5 }));
     expect(loadDraft('r1').step).toBe(0);
-    store.set('kartar-cup:draft:v2:r1', JSON.stringify({ answers: 'x', step: '2' }));
+    store.set('karter-cup:draft:v2:r1', JSON.stringify({ answers: 'x', step: '2' }));
     expect(loadDraft('r1')).toEqual({ answers: {}, step: 0 });
   });
 
   it('accepts step 0 and large integer steps', () => {
-    store.set('kartar-cup:draft:v2:r1', JSON.stringify({ answers: {}, step: 7 }));
+    store.set('karter-cup:draft:v2:r1', JSON.stringify({ answers: {}, step: 7 }));
     expect(loadDraft('r1').step).toBe(7);
   });
 
   it('survives corrupt JSON', () => {
-    store.set('kartar-cup:draft:v2:r1', '{not json');
+    store.set('karter-cup:draft:v2:r1', '{not json');
     expect(loadDraft('r1')).toEqual({ answers: {}, step: 0 });
   });
 

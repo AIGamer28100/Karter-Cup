@@ -63,7 +63,7 @@ export function VenueMap({ venue }: { venue: BookingEvent['venue'] }) {
 }
 
 /** Eyebrow wording per category (R50); legacy docs without a category are F1 watch parties. */
-const KIND_LABEL = { f1: 'Watch party', cup: 'Kartar Cup event', club: 'Kartar Club event' } as const;
+const KIND_LABEL = { f1: 'Watch party', cup: 'Karter Cup event', club: 'Karter Club event' } as const;
 
 export function ClosedNotice({ event }: { event: BookingEvent | null }) {
   const cancelled = event?.cancelled === true;
@@ -515,7 +515,7 @@ export default function BookingCheckout() {
   const { bookingEventId } = useParams<{ bookingEventId: string }>();
   const { ready, user } = useAuth();
   const [event, setEvent] = useState<BookingEvent | null | undefined>(undefined);
-  usePageMeta({ title: event?.title, description: event ? `${event.title} at ${event.venue.name}, ${event.venue.city} on ${fmtLocal(new Date(event.dateUtc).getTime())}. Book tickets with Kartar CUP.` : undefined });
+  usePageMeta({ title: event?.title, description: event ? `${event.title} at ${event.venue.name}, ${event.venue.city} on ${fmtLocal(new Date(event.dateUtc).getTime())}. Book tickets with Karter CUP.` : undefined });
 
   const [tierId, setTierId] = useState<string>('');
   const [qty, setQty] = useState(1);

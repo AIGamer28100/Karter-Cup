@@ -12,7 +12,7 @@ import { connectFirestoreEmulator, getFirestore } from 'firebase/firestore';
 
 const useEmulators = import.meta.env.VITE_USE_EMULATORS === 'true';
 
-const projectId: string = import.meta.env.VITE_FIREBASE_PROJECT_ID ?? 'kartar-cup';
+const projectId: string = import.meta.env.VITE_FIREBASE_PROJECT_ID ?? 'karter-cup';
 
 export const app = initializeApp({
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY ?? (useEmulators ? 'demo-key' : undefined),
@@ -24,7 +24,8 @@ export const app = initializeApp({
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 });
 export const auth = getAuth(app);
-export const db = getFirestore(app);
+// Local dev runs set VITE_FIRESTORE_DB=sandbox (.env.development.local, R73) so it never writes to the live database.
+export const db = getFirestore(app, import.meta.env.VITE_FIRESTORE_DB || '(default)');
 
 declare global {
   interface Window {

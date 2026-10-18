@@ -6,7 +6,7 @@ export interface Draft {
 }
 
 // Keyed by event id so a new race never shows the previous race's answers.
-const key = (eventId: string) => `kartar-cup:draft:v2:${eventId}`;
+const key = (eventId: string) => `karter-cup:draft:v2:${eventId}`;
 export const EMPTY_DRAFT: Draft = { answers: {}, step: 0 };
 
 export function loadDraft(eventId: string): Draft {

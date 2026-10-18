@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 // @ts-expect-error plain-JS Worker module, no types
 import { canRunBookings, verifyFirebaseIdToken } from '../../worker/places-proxy/src/verify.js';
 
-const PROJECT = 'kartar-cup';
+const PROJECT = 'karter-cup';
 const b64u = (b: ArrayBuffer | Uint8Array | string) => {
   const bytes = typeof b === 'string' ? new TextEncoder().encode(b) : new Uint8Array(b);
   return btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');

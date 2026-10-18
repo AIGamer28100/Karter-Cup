@@ -49,7 +49,7 @@ const TOKEN = 'abcdefghijklmnopqrstuvwxyz012345'; // 32 chars
 
 beforeAll(async () => {
   env = await initializeTestEnvironment({
-    projectId: 'kartar-cup-roles-rules-test',
+    projectId: 'karter-cup-roles-rules-test',
     firestore: { rules: readFileSync('firestore.rules', 'utf8') },
   });
 });

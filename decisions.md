@@ -239,3 +239,30 @@ The card answer needs two values (driver + points) but every other answer is one
 | B. A map `{driver, points}` per answer | Rejected | Several extra expressions x8 against the budget, and every consumer typed for strings changes |
 
 Scoring: the card question has no correct answer, so it is outside per-question scoring and `maxScore`; its points are the bonus. Points are capped 0..999.
+
+## Brand rename: new project vs display-name change (2026-10-14, R72)
+
+| Option | Verdict | Why |
+|---|---|---|
+| A. New `karter-cup` project, migrate auth + Firestore, delete old | CHOSEN | Project ID shows in `*.web.app` / `*.firebaseapp.com` URLs and cannot be renamed; user wants the correct name everywhere |
+| B. Keep `kartar-cup`, change display name, add custom domain | Rejected | Old ID stays visible in the default URL and sign-in popup domain |
+
+Migration keeps UIDs, so `users/{uid}/**` links survive. Everyone signs in again once.
+
+## Tester isolation: how a tester avoids prod data on one site (2026-10-14, R73)
+
+| Option | Verdict | Why |
+|---|---|---|
+| A. Named Firestore database `sandbox`, client switches `db` in test mode | CHOSEN | Prod data unreachable by construction; same rules exercised; one `db` export in `src/lib/firebase.ts` |
+| B. `test_` field / prefixed collections in prod database | Rejected | Every query and rule must filter; one missed filter leaks test data into prod views |
+| C. Staging site / second project | Rejected | User: no extra hosted sites |
+| D. Seed sandbox from a prod copy | Rejected | Gives testers real guest PII (R15); fixtures used instead |
+
+
+## Local isolation on real Firebase (2026-10-18, R74)
+| Option | Verdict | Why |
+|---|---|---|
+| A. Named Firestore database `sandbox`, selected by `VITE_FIRESTORE_DB` | CHOSEN | One line in `firebase.ts`; every path and every rule unchanged; the same database R73's tester mode needs |
+| B. Prefixed collections (`dev_events`, ...) | Rejected | 46 call sites across 8 modules plus every `match` in firestore.rules would fork |
+| C. Keep the old `kartar-cup` project as the dev backend | Rejected | The owner is shutting it down after the move |
+A first database named `local` was seeded with a full live copy, then deleted the same hour: R73 forbids prod copies in the sandbox, so `sandbox` was re-seeded without personal data.

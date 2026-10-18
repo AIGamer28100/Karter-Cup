@@ -67,7 +67,7 @@ const host = () => env.authenticatedContext('h1', HOST_TOKEN).firestore();
 
 beforeAll(async () => {
   env = await initializeTestEnvironment({
-    projectId: 'kartar-cup-rules-test',
+    projectId: 'karter-cup-rules-test',
     firestore: { rules: readFileSync('firestore.rules', 'utf8') },
   });
 });

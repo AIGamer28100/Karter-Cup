@@ -47,9 +47,9 @@ npx wrangler deploy
 cat <<'NEXT'
 
 Next:
-  1. Copy the printed https://kartar-openf1-live.<subdomain>.workers.dev URL: it is the value for
+  1. Copy the printed https://karter-openf1-live.<subdomain>.workers.dev URL: it is the value for
      VITE_OPENF1_LIVE_URL (no trailing slash).
-  2. Smoke-test it:   LIVE=<that url> ORIGIN=https://kartar-cup.web.app npm run worker:live:smoke
+  2. Smoke-test it:   LIVE=<that url> ORIGIN=https://karter-cup.web.app npm run worker:live:smoke
   3. Rebuild the site with it and redeploy hosting:
        VITE_OPENF1_LIVE_URL=<that url> npm run build && npm run deploy
 NEXT

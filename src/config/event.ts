@@ -7,7 +7,7 @@ import { defaultQuizWindow } from '../lib/quizWindow';
 import { factsFor } from './tracks/raceFacts';
 
 export const WHATSAPP_COMMUNITY_URL = '';
-export const SITE_TITLE = 'Kartar CUP';
+export const SITE_TITLE = 'Karter CUP';
 export const EVENT_NAME = 'Race Watch Party';
 export const EVENT_SUBTITLE = 'The Karter Cup watch party';
 

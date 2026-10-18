@@ -66,7 +66,7 @@ function PartnerCard({ p }: { p: Partner }) {
 }
 
 export function PartnersPage() {
-  usePageMeta({ title: 'Partners', description: 'The sponsors, venues and community partners behind Kartar CUP events.' });
+  usePageMeta({ title: 'Partners', description: 'The sponsors, venues and community partners behind Karter CUP events.' });
   const { items, failed } = usePublished<Partner>(watchPublishedPartners);
   return (
     <Shell>
@@ -131,7 +131,7 @@ export function StoriesPage() {
   const story = storyId && items ? items.find((s) => s.id === storyId) : undefined;
   usePageMeta({
     title: story ? story.title : 'Stories',
-    description: story?.summary || 'Race recaps, event stories and news from the Kartar CUP community.',
+    description: story?.summary || 'Race recaps, event stories and news from the Karter CUP community.',
   });
 
   if (storyId) {
@@ -174,7 +174,7 @@ export function StoriesPage() {
       <Reveal>
         <Eyebrow>Stories</Eyebrow>
         <h1 className={`mt-3 ${PageTitle}`}>From the paddock and the community</h1>
-        <p className="mt-3 max-w-[60ch] text-pretty text-muted">Race recaps, event stories and news from Kartar CUP.</p>
+        <p className="mt-3 max-w-[60ch] text-pretty text-muted">Race recaps, event stories and news from Karter CUP.</p>
       </Reveal>
       <Reveal index={1} className="mt-8">
         {failed && <p role="alert" className="text-accent-text">We could not load the stories right now. Try again in a moment.</p>}

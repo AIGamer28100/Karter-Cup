@@ -37,7 +37,7 @@ const snap = (over: Record<string, unknown> = {}) => ({ cardId: 'c2', driverName
 
 beforeAll(async () => {
   env = await initializeTestEnvironment({
-    projectId: 'kartar-cup-cards-rules-test',
+    projectId: 'karter-cup-cards-rules-test',
     firestore: { rules: readFileSync('firestore.rules', 'utf8') },
   });
 });

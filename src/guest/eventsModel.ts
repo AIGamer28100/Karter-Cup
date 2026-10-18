@@ -116,8 +116,8 @@ export function nextHostedRace(now: Date, races: RaceInfo[], bookingEvents: Book
 export type EventsTab = 'f1' | 'cup' | 'club' | 'all';
 export const EVENTS_TABS: { id: EventsTab; label: string }[] = [
   { id: 'f1', label: 'F1' },
-  { id: 'cup', label: 'Kartar Cup' },
-  { id: 'club', label: 'Kartar Club' },
+  { id: 'cup', label: 'Karter Cup' },
+  { id: 'club', label: 'Karter Club' },
   { id: 'all', label: 'All' },
 ];
 

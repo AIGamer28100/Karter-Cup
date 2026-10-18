@@ -164,7 +164,7 @@ export function BookingEventForm() {
           <Field
             id="f-category"
             label="Event type"
-            hint="Where it appears on /events. Kartar Cup and Kartar Club events are free-form (no calendar race)."
+            hint="Where it appears on /events. Karter Cup and Karter Club events are free-form (no calendar race)."
           >
             <select
               id="f-category"
@@ -173,8 +173,8 @@ export function BookingEventForm() {
               onChange={(e) => patch(() => ({ category: e.target.value as EventCategory }))}
             >
               <option value="f1">F1 watch party</option>
-              <option value="cup">Kartar Cup event</option>
-              <option value="club">Kartar Club event</option>
+              <option value="cup">Karter Cup event</option>
+              <option value="club">Karter Club event</option>
             </select>
           </Field>
           {form.category === 'f1' && (
@@ -469,7 +469,7 @@ function EventListRow({ ev, navigate }: { ev: BookingEvent; navigate: ReturnType
               )}
             </div>
             <p className="font-mono text-sm text-muted">
-              {{ f1: 'F1', cup: 'Kartar Cup', club: 'Kartar Club' }[ev.category ?? 'f1']} · {ev.venue.name}
+              {{ f1: 'F1', cup: 'Karter Cup', club: 'Karter Club' }[ev.category ?? 'f1']} · {ev.venue.name}
               {ev.hosted === false && !ev.salesOpen ? ' · hidden' : ''}
             </p>
             {refundsOffNoDate(ev) && <DateMsNotice ev={ev} />}

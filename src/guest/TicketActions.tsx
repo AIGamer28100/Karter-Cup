@@ -26,7 +26,7 @@ export default function TicketActions({ event, bookingId }: { event: BookingEven
     title: event.title,
     startMs,
     location: `${event.venue.name}, ${event.venue.city}`,
-    details: `Your Kartar CUP ticket: ${window.location.origin}/tickets/${bookingId}`,
+    details: `Your Karter CUP ticket: ${window.location.origin}/tickets/${bookingId}`,
   };
 
   function downloadIcs() {
@@ -34,7 +34,7 @@ export default function TicketActions({ event, bookingId }: { event: BookingEven
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'kartar-cup-watch-party.ics';
+    a.download = 'karter-cup-watch-party.ics';
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }

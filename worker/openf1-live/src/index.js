@@ -1,4 +1,4 @@
-// OpenF1 paid live-data proxy for the Kartar Cup host console. DORMANT until the owner sets the
+// OpenF1 paid live-data proxy for the Karter Cup host console. DORMANT until the owner sets the
 // Worker secrets OPENF1_USERNAME / OPENF1_PASSWORD (then it serves the current race lap).
 // The OpenF1 credentials live ONLY here; the browser never sees them. Setup: README.md.
 // Callers must send a Firebase ID token of any signed-in user (the data is public sports data and

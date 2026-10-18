@@ -425,7 +425,7 @@ function GallerySection() {
   );
 }
 
-/** The Kartar CUP home page: a community/brand page. The quiz is not offered here; it lives behind
+/** The Karter CUP home page: a community/brand page. The quiz is not offered here; it lives behind
  * the host's /play link. */
 export default function HomePage() {
   usePageMeta({});

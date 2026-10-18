@@ -2,11 +2,11 @@ import { describe, expect, it } from 'vitest';
 import { buildDescription, buildTitle, DEFAULT_DESCRIPTION } from './pageMeta';
 
 describe('buildTitle', () => {
-  it('suffixes the site name', () => expect(buildTitle('Events')).toBe('Events | Kartar CUP'));
+  it('suffixes the site name', () => expect(buildTitle('Events')).toBe('Events | Karter CUP'));
   it('falls back to the site name', () => {
-    expect(buildTitle()).toBe('Kartar CUP');
-    expect(buildTitle('  ')).toBe('Kartar CUP');
-    expect(buildTitle('kartar cup')).toBe('Kartar CUP');
+    expect(buildTitle()).toBe('Karter CUP');
+    expect(buildTitle('  ')).toBe('Karter CUP');
+    expect(buildTitle('karter cup')).toBe('Karter CUP');
   });
 });
 

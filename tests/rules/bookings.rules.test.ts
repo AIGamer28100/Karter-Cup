@@ -68,7 +68,7 @@ async function seedBooking(id: string, over: Record<string, unknown> = {}) {
 
 beforeAll(async () => {
   env = await initializeTestEnvironment({
-    projectId: 'kartar-cup-bookings-rules-test',
+    projectId: 'karter-cup-bookings-rules-test',
     firestore: { rules: readFileSync('firestore.rules', 'utf8') },
   });
 });

@@ -1,5 +1,5 @@
 {
-  "name": "kartar-cup",
+  "name": "karter-cup",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -8,8 +8,8 @@
     "build": "tsc -b && vite build",
     "test": "vitest run",
     "lint": "eslint .",
-    "deploy": "firebase deploy --project kartar-cup --only hosting,firestore:rules",
-    "deploy:all": "firebase deploy --project kartar-cup",
+    "deploy": "firebase deploy --project karter-cup --only hosting,firestore:rules",
+    "deploy:all": "firebase deploy --project karter-cup",
     "worker:dev": "cd worker/places-proxy && wrangler dev --env dev --port 8787",
     "worker:secret": "cd worker/places-proxy && wrangler secret put GOOGLE_PLACES_API_KEY",
     "worker:deploy": "cd worker/places-proxy && wrangler deploy",

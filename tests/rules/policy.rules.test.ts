@@ -32,7 +32,7 @@ const eventDoc = (id: string, over: Record<string, unknown> = {}) => ({
 
 beforeAll(async () => {
   env = await initializeTestEnvironment({
-    projectId: 'kartar-cup-policy-rules-test',
+    projectId: 'karter-cup-policy-rules-test',
     firestore: { rules: readFileSync('firestore.rules', 'utf8') },
   });
 });

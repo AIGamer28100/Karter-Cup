@@ -8,7 +8,7 @@ import { Eyebrow, H3, PageTitle, Reveal, Shell } from './parts';
 export default function AboutPage() {
   usePageMeta({
     title: 'About',
-    description: 'Kartar CUP is the booking and watch-party site for The Karter Cup, a motorsport events and community, and The Karter Club.',
+    description: 'Karter CUP is the booking and watch-party site for The Karter Cup, a motorsport events and community, and The Karter Club.',
   });
   return (
     <Shell>
@@ -36,7 +36,7 @@ export default function AboutPage() {
         <Reveal index={2}>
           <h2 className={H3}>This site</h2>
           <p className="mt-2 text-muted">
-            Kartar CUP is where you find upcoming events, book tickets and, on race days, join the
+            Karter CUP is where you find upcoming events, book tickets and, on race days, join the
             prediction quiz. Follow the real accounts for news and photos on the{' '}
             <Link to="/contact" className="text-ink underline underline-offset-4 hover:text-accent-text">
               contact page

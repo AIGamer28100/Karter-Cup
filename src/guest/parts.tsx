@@ -56,7 +56,7 @@ function LogoMark() {
       <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
         <span className="absolute inset-0 rounded-full bg-accent shadow-[0_0_10px_1px_rgb(216_30_54/0.6)] transition-transform duration-200 group-hover:scale-125" />
       </span>
-      Kartar CUP
+      Karter CUP
     </Link>
   );
 }
@@ -319,7 +319,7 @@ function SiteFooter() {
         <InView kind="fade" className="max-w-sm">
           <p className="inline-flex items-center gap-2 text-base font-semibold tracking-tight text-ink">
             <span className="h-2 w-2 shrink-0 rounded-full bg-accent" aria-hidden="true" />
-            Kartar CUP
+            Karter CUP
           </p>
           <p className="mt-3 text-sm leading-relaxed text-muted">
             Karting events and sim racing. Watch parties with The Karter Club.
